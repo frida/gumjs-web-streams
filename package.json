@@ -1,0 +1,30 @@
+{
+  "name": "@frida/web-streams",
+  "description": "Node.js's stream/web module for Frida",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./index.js",
+  "files": [
+    "/index.js",
+    "/ponyfill.js"
+  ],
+  "type": "module",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "cp node_modules/web-streams-polyfill/dist/ponyfill.mjs ponyfill.js"
+  },
+  "keywords": [
+    "frida",
+    "streams"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frida/gumjs-web-streams.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "web-streams-polyfill": "4.3.0"
+  }
+}
